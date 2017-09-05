@@ -60,13 +60,62 @@ track of whether tasks have been completed, it will also keep track of
 how long each task took to complete. Tasks can be grouped into 'projects' to
 keep them organized.
 
-> Answer here
+const task = {
+  name: 
+  deadline: 
+}
+
+const projects = {
+  name: 
+  deadline: 
+  deadlineCountdown: 
+  projectTeamMates:
+  tasks: 
+  displayProgress: 
+  sendProgress: 
+}
+
+--App will allow you to list the last by name, add a brief summary, and add data like when the task is due. 
+
+
+--A project will allow you to create a separate folder of various tasks of a larger project -- say you're working with other memebers on a project with multiple tasks, you wull be allowed to add additional tasks and mark them complete as you work through the process. Perhaps it displays your progress in an easy to read graphic and you can share this progress through the app to other friends or you can send the graphic via SMS/Email to your teammates. 
+
+
+
 
 ### 2. Photo Sharing App
 
 In this app, users can upload photos to their accounts and share them with others. These photos can be grouped into albums.
 
-> Answer here
+
+-- Actual photo: name, when it was taken/when it's published, 
+
+--A user's own page with their own photos - maybe you can have your own photos on your page, but can also send images directly to friends on the app in a private capacity
+
+--Function to find friends ...public source with a random photo generator which is displayed
+
+--
+
+const photo = {
+    name: 
+    photoCreated:
+}
+
+const usersPage =  {
+    username: 
+    individualizedPageURL: 
+    listOfPhotos: 
+    datesOfPhotosPublished:
+    userPrivateChat: 
+}
+
+const search {
+    searchBy: username, usersRealName, tags,
+    randomPhotoGenerator:
+}
+
+
+
 
 ### 3. Home Automation Manager
 
@@ -75,13 +124,41 @@ track of the time and temperature of the house that it monitors, and use that
 information to turn on and off different lights and adjust the thermostat up
 and down.
 
-> Answer here
+--Monitor has a calendar, clock, thermometer, lights seperated by location, brightness/dimmer swtich, light hue, one and off switch. 
+
+const setTemperature = {
+    currentTempReadOut: 
+    timer: 5:00pm, 
+
+}
+
+let lights = {
+    byLocation: kitchen, dining room, living room, laundry room,...
+    brightness: 100Watt,
+    hue: tungston,
+
+}
+
 
 ### 4. Sneaker Store
 
 This app will allow customers to browse a list of products (sneakers, in this
 case), add those products to a cart, and save that cart as a past order once the
 purchase is complete.
+
+--Products sorted by name, display a photo, quick view option: a pop up, option to take you to the full item page, cart image, 
+
+const sneakerStore = {
+    itemName: 
+    itemImage: 
+    itemQuickView: 
+    itemAddToCart: 
+    cart: 
+    orderHistory:
+}
+
+
+
 
 > Answer here
 
@@ -139,7 +216,14 @@ var exampleLine = {
 
 What are some advantages and disadvantages of choosing these representations? Please give at least one example of each.
 
-> Answer here
+---Advantages:
+  1. Description referenced the biggest highlights - probably best for tourists who are not familiar with the city and the rail line. 
+  2. 
+
+---Disadvantages: 
+  1. If a passenger is looking to go somewhere that is not listed in the rail-line description, will s/he know which line to take? Will there be a visual map for the passenger to read?
+  2. Doesn't always denote compass direction marker -- doing north or even saying going east or uptown.downtown. 
+
 
 ### 6. Doctor Appointment App
 
@@ -242,7 +326,19 @@ Under what circumstances might one representation be a better choice than the
 other? Are there any circumstances in which the other representation might be
 the better choice?
 
-> Answer here
+Option 1. 
+Advantages: 
+    Readout looks like it could be a faster way for the doctor to quickly identify which patent is coming next. 
+Disadvantages: 
+    If there is more than one doctor at the office, it would be helpful to have that listed on Example Appointment
+
+
+Option 2.
+Advantages:
+    Given the doctors are going to be the constant at the office and the patient, dates, and times are what will be changing regularly, I think those should be listed at the top and should go : Date, Time, Doctor --> Patient
+Disadvantages: 
+    No addresses given? 
+
 
 ## Tying It Together
 
@@ -253,13 +349,30 @@ You've been tasked with building an in-browser tic-tac-toe game.
 a.  What are some possible entities that your application might use to model its
     data? Please pick at least two, with at least two properties apiece.
 
-  > Answer here
+  - Person playing
+      1. username
+      2. email address
+      3. Or play as a guest
+
+  - Game Piece
+    1. x or o
+    2. color? 
 
 b.  How might those entities be represented in JavaScript code?
 
-  > Answer here
+  const player = {
+      username: victemple,
+      emailAddress: victoriactemple@gmail.com
+  }
+
+  const gamePiece = {
+    xOrO: x or o,
+    color: red,
+
+  }
 
 c.  Justify your choices in a) and b). Why these entities? Why these
     representations?
 
-  > Answer here
+    Having to sign in or create a username seemed the most obvious, but a lot of online games will allow you to play without signing in or creating an account, so I wonder if playing as a guest would be in the 1st portion or be a separate property
+    Tic Tac Toe limits your game piece to two options, but perhaps the game will let you customize it to your own taste, like a lot of online Solitare game sites will let you choose from a various set of decks 
