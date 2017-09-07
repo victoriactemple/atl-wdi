@@ -16,18 +16,30 @@
 
 
 window.onload = function() {
+
+
+
+
+
+  
   var body = document.body;
   var ring1 = document.querySelector('.ring-1');
   var ring2 = document.querySelector('.ring-2');
   var ring3 = document.querySelector('.ring-3');
 
+  const bullseye = 100;
+  const middleRing = 50;
+  const outerRing = 10;
+  const miss = 0;
+
+
   body.addEventListener('click', bullseyeGame.miss);
   ring1.addEventListener('click', bullseyeGame.outerRing)
 }
 
-
 var bullseyeGame = {
   score: 0,
+
 
   updateScore: function(points) {
     var scoreElement = document.querySelector('.score');

@@ -36,7 +36,7 @@ var resFive = true;
 var resSix;
 const i = 0;
 while (i <= 23) {
-  alert (i);
+  alert(i)
   i++;
 }
 `resSix`.toString();
