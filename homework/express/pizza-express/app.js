@@ -14,19 +14,29 @@ app.set('views', './views');
 
 
 app.get('/', (req, res) =>{
-    res.send("Welcome to Pizza Express");
+    const greeting = "Welcome to Pizza Express";
+    res.render("index", {
+        route: greeting})
 })
 
 app.get('/topping/:type', (req, res, next) =>{
-    const type = req.params.type
-   res.send(`${type} a good choice!`);
+    const type = req.params.type;
+//    res.render(`${type} a good choice!`);
+   res.render("toppings", {
+       toppings: type
+   })
 
-});
+})
 
 app.get('/order/:amount/:size', (req, res, next) =>{
     const amount = req.params.amount;
     const size = req.params.size;
-    res.send(`Your order of ${amount} ${size} will be reading in 1 minute!`)
+    const newArray = [amount, size];
+    // res.send(`Your order of ${amount} ${size} will be reading in 1 minute!`)
+    res.render('order', {
+        newOrder: newArray
+    })
+
 })
 
 // tells the server to listen for requests on port 3000
