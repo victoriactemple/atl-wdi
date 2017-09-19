@@ -6,7 +6,7 @@ router.get('/', (req, res) =>{
     // const greeting = "hey there ";
     // res.send(`hi ${req.query.name}`)
 
-    res.render("name", {})
+    res.render("name")
 
 })
 
