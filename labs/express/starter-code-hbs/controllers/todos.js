@@ -33,6 +33,8 @@ router.get('/:id', (req, res) => {
     }
 });
 
+/* SHOW TODONTS POST */
+
 router.post('/', (req, res) => {
     console.log(req.body);
     const newTodo = req.body;
