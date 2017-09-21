@@ -14,6 +14,9 @@ app.use(bodyParser.urlencoded({
 
 /*Views*/
 app.set('view engine', 'hbs');
+
+// expierment with this line below...if you move the views folder out of place, will it find it? 
+app.set(‘views’, ‘./views’);
 app.use(express.static(__dirname + '/public'));
 
 

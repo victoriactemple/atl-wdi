@@ -12,6 +12,8 @@ app.use(express.static(__dirname + '/public'));
 
 /* set up the application params*/
 
+const methodOverride = require('method-override');
+app.use(methodOverride('_method'));
 
 // log
 app.use( logger('dev'));

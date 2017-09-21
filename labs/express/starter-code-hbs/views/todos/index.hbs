@@ -4,7 +4,14 @@
     <li>Description: {{description}}</li>
     <li>Urgent: {{urgent}}</li>
     <br>
+    {{!-- <li>Location: {{location}}</li> --}}
+  <div><a href="/todos/{{@index}}/edit">Edit</a></div>
+  <form action="/todos/{{@index}}?_method=DELETE" method="POST">
+  <input type="submit" value="DELETE"/>
+  </form> 
   {{/each}}
 </ul>
+
+
 
 <a href ="/todos/new">Create a Todo</a>
