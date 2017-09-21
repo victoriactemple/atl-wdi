@@ -14,6 +14,8 @@ app.use(bodyParser.urlencoded({
 
 /*Views*/
 app.set('view engine', 'hbs');
+app.use(express.static(__dirname + '/public'));
+
 
 //controllers for `/pirates` resource
 var pirateController = require('./controllers/pirates.js');

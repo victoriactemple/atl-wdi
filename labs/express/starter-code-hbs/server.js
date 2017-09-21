@@ -8,6 +8,7 @@ const bodyParser = require('body-parser');
 var app         = express();
 var port        = process.env.PORT || 3000;
 const todosController = require('./controllers/todos');
+app.use(express.static(__dirname + '/public'));
 
 /* set up the application params*/
 
