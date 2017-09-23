@@ -8,8 +8,8 @@ class Tamogotchi {
     this.health = 10
     }
     cry (){
-        this.foodInTummy - 1 
-        console.log("WAHH!!")
+    this.foodInTummy - 1 
+    console.log("WAHH!!")
     }
 }
 
@@ -20,3 +20,8 @@ const bob = new Tamogotchi()
 //test out your Tamagotchies below via console.logs
 console.log(henry);
 console.log(bob);
+
+// Invoke each tamagotchi's cry method
+
+console.log(henry.cry());
+console.log(bob.cry());
