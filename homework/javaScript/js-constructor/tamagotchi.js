@@ -12,7 +12,7 @@ class Tamagotchi {
     cry (){
     this.foodInTummy --
     console.log(this.name + ' says WAHH!!' + this.foodinTummy)
-    return this
+    // return this
     }
     puke(){
         this.foodInTummy --
@@ -25,9 +25,9 @@ class Tamagotchi {
         return this
     }
 }
-//create new Tamagotchis
-const henry = new Tamagotchi()
-const bob = new Tamagotchi()
+// //create new Tamagotchis
+// const henry = new Tamagotchi()
+// const bob = new Tamagotchi()
 
 //test out your Tamagotchies below via console.logs
 // console.log(henry);
@@ -35,17 +35,20 @@ const bob = new Tamagotchi()
 
 // Invoke each tamagotchi's cry method
 
-console.log(henry.cry());
-console.log(bob.cry());
+// console.log(henry.cry());
+// console.log(bob.cry());
 
-console.log(henry.cry());
-console.log(bob.cry());
+// console.log(henry.cry());
+// console.log(bob.cry());
 
 
 // Part 2: Add Arguments
 
-// const hank = new Tamagotchi("Hank", "bunny");
-// // console.log(hank.cry())
+const hank = new Tamagotchi("Hank", "bunny");
+const felix = new Tamagotchi("Felix", "cat");
+
+console.log(hank.cry())
+console.log(felix.cry())
 
 // // Part 3: More Methods
 
