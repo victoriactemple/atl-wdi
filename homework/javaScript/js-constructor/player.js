@@ -17,8 +17,24 @@ var player = {
 }; //end player
 
 
-const hank = new Tamagotchi("Hank", "bunny");
+//create new Tamagotchis
+// const henry = new Tamagotchi()
+// const bob = new Tamagotchi()
 
-player.feedTamogotchi(hank)
-// medicateTamagotchi()
+// const henry = new Tamagotchi()
+// const bob = new Tamagotchi()
+
+player.feedTamagotchi(neelix)
+player.medicateTamagotchi(neelix)
+player.knockOutTamagotchi(neelix)
+
+
+
+player.feedTamagotchi(buzzbee)
+player.medicateTamagotchi(buzzbee)
+player.knockOutTamagotchi(buzzbee)
+
+
+// player.feedTamogotchi(hank)
+// // medicateTamagotchi()
 // knockOutTamagochi()

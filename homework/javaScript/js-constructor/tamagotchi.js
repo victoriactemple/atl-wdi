@@ -25,9 +25,9 @@ class Tamagotchi {
         return this
     }
 }
-// //create new Tamagotchis
-// const henry = new Tamagotchi()
-// const bob = new Tamagotchi()
+//create new Tamagotchis
+const henry = new Tamagotchi()
+const bob = new Tamagotchi()
 
 //test out your Tamagotchies below via console.logs
 // console.log(henry);
@@ -44,8 +44,8 @@ class Tamagotchi {
 
 // Part 2: Add Arguments
 
-// const hank = new Tamagotchi("Hank", "bunny");
-// const felix = new Tamagotchi("Felix", "cat");
+const hank = new Tamagotchi("Hank", "bunny");
+const felix = new Tamagotchi("Felix", "cat");
 
 // console.log(hank.cry())
 // console.log(felix.cry())
@@ -55,8 +55,8 @@ class Tamagotchi {
 const neelix = new Tamagotchi ("Neelix", "alien")
 const buzzbee = new Tamagotchi("Buzzbee", "floater")
 
-neelix.yawn().puke()
-buzzbee.yawn().puke()
+// neelix.yawn().puke()
+// buzzbee.yawn().puke()
 
-console.log(neelix.yawn().puke())
-console.log(buzzbee.yawn().puke())
+// console.log(neelix.yawn().puke())
+// console.log(buzzbee.yawn().puke())
