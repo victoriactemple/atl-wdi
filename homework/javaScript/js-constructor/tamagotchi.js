@@ -12,7 +12,7 @@ class Tamagotchi {
     cry (){
     this.foodInTummy --
     console.log(this.name + ' says WAHH!!' + this.foodinTummy)
-    // return this
+    return this
     }
     puke(){
         this.foodInTummy --
@@ -44,19 +44,19 @@ class Tamagotchi {
 
 // Part 2: Add Arguments
 
-const hank = new Tamagotchi("Hank", "bunny");
-const felix = new Tamagotchi("Felix", "cat");
+// const hank = new Tamagotchi("Hank", "bunny");
+// const felix = new Tamagotchi("Felix", "cat");
 
-console.log(hank.cry())
-console.log(felix.cry())
+// console.log(hank.cry())
+// console.log(felix.cry())
 
 // // Part 3: More Methods
 
-// const neelix = new Tamagotchi ("Neelix", "alien")
-// const buzzbee = new Tamagotchi("Buzzbee", "floater")
+const neelix = new Tamagotchi ("Neelix", "alien")
+const buzzbee = new Tamagotchi("Buzzbee", "floater")
 
-// neelix.yawn().puke()
-// buzzbee.yawn().puke()
+neelix.yawn().puke()
+buzzbee.yawn().puke()
 
-// console.log(neelix.yawn().puke())
-// console.log(buzzbee.yawn().puke())
+console.log(neelix.yawn().puke())
+console.log(buzzbee.yawn().puke())
