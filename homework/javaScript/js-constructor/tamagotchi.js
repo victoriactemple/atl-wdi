@@ -1,7 +1,7 @@
 console.log('tamagotchi file is loaded');
 
 //your class declaration here
-class Tamogotchi {
+class Tamagotchi {
     constructor(name, creatureType){
     this.name = name
     this.creatureType = creatureType
@@ -10,14 +10,24 @@ class Tamogotchi {
     this.health = 10
     }
     cry (){
-    this.foodInTummy - 1 
+    this.foodInTummy --
     console.log(this.name + ' says WAHH!!')
+    return this
+    }
+    puke(){
+        this.foodInTummy --
+        console.log(this.foodInTummy + "WAHHH WAHHH, I'm sick")
+        return this
+    }
+    yawn(){
+        this.restedness --
+        console.log(this.name + "has a current restedness level of" + this.restedness)
+        return this
     }
 }
-
-//create new Tamagotchis
-const henry = new Tamogotchi()
-const bob = new Tamogotchi()
+// //create new Tamagotchis
+// const henry = new Tamagotchi()
+// const bob = new Tamagotchi()
 
 //test out your Tamagotchies below via console.logs
 // console.log(henry);
@@ -30,5 +40,17 @@ const bob = new Tamogotchi()
 
 // Part 2: Add Arguments
 
-const hank = new Tamogotchi("Hank", "bunny");
-console.log(hank.cry())
+// const hank = new Tamagotchi("Hank", "bunny");
+// console.log(hank.cry())
+
+// Part 3: More Methods
+
+const neelix = new Tamagotchi ("Neelix", "alien")
+const buzzbee = new Tamagotchi("Buzzbee", "floater")
+
+neelix.yawn().puke()
+buzzbee.yawn().puke()
+
+
+console.log(neelix)
+console.log(buzzbee)
