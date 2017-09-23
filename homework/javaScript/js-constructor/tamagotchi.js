@@ -11,18 +11,37 @@ class Tamagotchi {
     }
     cry (){
     this.foodInTummy --
-    console.log(this.name + ' says WAHH!!' + this.foodinTummy)
+    console.log(this.name + " says WAHH!! and has a food in tummy level of: " + this.foodInTummy)
     return this
     }
     puke(){
         this.foodInTummy --
-        console.log(this.foodInTummy + "WAHHH WAHHH, I'm sick")
+        console.log(this.foodInTummy + " WAHHH WAHHH, I'm sick")
         return this
     }
     yawn(){
         this.restedness --
-        console.log(this.name + "has a current restedness level of" + this.restedness)
+        console.log(this.name + " has a current restedness level of: " + this.restedness)
         return this
+    }
+    start () {
+        console.log("start" + this.name)
+        const me = this
+        this.hungerTimer = setInterval(function() {
+            me.cry();
+        }, 6000)
+       this.yawnTimer = setInterval(function() {
+           me.yawn();
+       }, 10000)    
+       this.sickTimer = setInterval(function() {
+           me.puke();
+       }, 20000)
+    }
+    stop () {
+        console.log("stop" + this.name);
+    clearInterval(this.hungerTimer);
+    clearInterval(this.yawnTimer);
+    clearInterval(this.sickTimer);
     }
 }
 //create new Tamagotchis
@@ -60,3 +79,21 @@ const buzzbee = new Tamagotchi("Buzzbee", "floater")
 
 // console.log(neelix.yawn().puke())
 // console.log(buzzbee.yawn().puke())
+
+// Part 5: Start and Stop
+
+const frank = new Tamagotchi("Frank", "alien")
+const noel = new Tamagotchi ("Noel", "Christmas-Ornament")
+
+// console.log(frank.cry().puke().yawn())
+// console.log(noel.cry().puke().yawn())
+
+
+console.log(frank.puke())
+console.log(noel.cry())
+
+
+console.log(frank.start())
+console.log(noel.start())
+
+console.log(frank.stop())
