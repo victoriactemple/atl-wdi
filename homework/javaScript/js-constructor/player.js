@@ -15,3 +15,10 @@ var player = {
     console.log(tamagotchi.name + ' got some Zzzzs! Restedness: ' + tamagotchi.restedness);
   }
 }; //end player
+
+
+const hank = new Tamagotchi("Hank", "bunny");
+
+player.feedTamogotchi(hank)
+// medicateTamagotchi()
+// knockOutTamagochi()

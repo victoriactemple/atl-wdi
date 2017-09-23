@@ -11,7 +11,7 @@ class Tamagotchi {
     }
     cry (){
     this.foodInTummy --
-    console.log(this.name + ' says WAHH!!')
+    console.log(this.name + ' says WAHH!!' + this.foodinTummy)
     return this
     }
     puke(){
@@ -25,9 +25,9 @@ class Tamagotchi {
         return this
     }
 }
-// //create new Tamagotchis
-// const henry = new Tamagotchi()
-// const bob = new Tamagotchi()
+//create new Tamagotchis
+const henry = new Tamagotchi()
+const bob = new Tamagotchi()
 
 //test out your Tamagotchies below via console.logs
 // console.log(henry);
@@ -35,22 +35,25 @@ class Tamagotchi {
 
 // Invoke each tamagotchi's cry method
 
-// console.log(henry.cry());
-// console.log(bob.cry());
+console.log(henry.cry());
+console.log(bob.cry());
+
+console.log(henry.cry());
+console.log(bob.cry());
+
 
 // Part 2: Add Arguments
 
 // const hank = new Tamagotchi("Hank", "bunny");
-// console.log(hank.cry())
+// // console.log(hank.cry())
 
-// Part 3: More Methods
+// // Part 3: More Methods
 
-const neelix = new Tamagotchi ("Neelix", "alien")
-const buzzbee = new Tamagotchi("Buzzbee", "floater")
+// const neelix = new Tamagotchi ("Neelix", "alien")
+// const buzzbee = new Tamagotchi("Buzzbee", "floater")
 
-neelix.yawn().puke()
-buzzbee.yawn().puke()
+// neelix.yawn().puke()
+// buzzbee.yawn().puke()
 
-
-console.log(neelix)
-console.log(buzzbee)
+// console.log(neelix.yawn().puke())
+// console.log(buzzbee.yawn().puke())
