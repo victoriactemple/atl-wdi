@@ -125,3 +125,37 @@ const customers = [
 
 // CODE FOR QUESTION 6 HERE
 //  first guesses...I don't think this is it. promise.all(customers).order
+
+
+Promise.all(
+  [ {
+    name: "Josie",
+    order: "Holy Guacamole"
+  }, {
+    name: "Chris",
+    order: "Big Blue Buffalo"
+  }, {
+    name: "John",
+    order: "Blue 'Shroom",
+  }, {
+    name: "Katelyn",
+    order: "Fat Elvis"
+  }]
+).then((customer) =>{
+  customer.forEach(order => order())
+})
+
+
+
+
+
+
+
+// kitchen.order("Yokohama Mama")
+// .then((item) => {
+// console.log(item)
+// })
+
+// kitchen.order("Big Bad Voodoo Patty").then(console.log).catch(console.log)
+
+// Promise.all(customers).then(console.log("All Food Delivered"))
