@@ -11,6 +11,9 @@ var hbs = require("hbs");
 var logger = require('morgan');
 
 
+mongoose.connect('mongodb://localhost/donut_store');
+
+
 //======================
 // MIDDLEWARE
 //======================
@@ -42,4 +45,19 @@ app.use('/', donutsController);
 //CONNECT MONGOOSE TO "donut_store"
 
 
+const db = mongoose.connection;
+
+// db.on('error', function (err) {
+//     console.log(err)
+// })
+
+// // Will log "database has been connected" if it successfully connects.
+// db.once('open', function () {
+//     console.log("database has been connected!");
+// });
+
+const port = 3000
+app.listen(port, () =>{
+    console.log(`Express started on ${port}`)
+})
 //CREATE THE MONGOOSE CONNECTION and SET APP TO LISTEN to 3000

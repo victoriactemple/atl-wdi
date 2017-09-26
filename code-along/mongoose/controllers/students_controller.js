@@ -44,7 +44,7 @@ router.get('/:id', (req, res) => {
     //We need the Id, grab id from the params
     const studentId = req.params.id
 
-    //tFind the student y ID from the DB
+    //Find the student y ID from the DB
     StudentModel.findById(studentId)
     //THEN, once the database has returned the single student's info, 
     //Use handlebars to create a div for the single student
