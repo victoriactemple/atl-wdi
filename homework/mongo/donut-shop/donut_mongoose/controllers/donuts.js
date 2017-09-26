@@ -6,7 +6,9 @@ const express = require('express')
 const router = express.Router()
 const mongoose = require('mongoose')
 
-// const Schema = require('../db/schema.js')
+const Schema = require('../models/donuts.js')
+
+ 
 
 //======================
 // INDEX
@@ -66,4 +68,5 @@ const mongoose = require('mongoose')
 // EXPORTS
 //======================
 // export router with module.exports
+
 module.exports = router
