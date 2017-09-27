@@ -34,21 +34,21 @@ router.get('/new', (req, res) => {
     res.render('donuts/new')
 })
 
-//======================
 // SHOW
 //======================
 // Create a GET show route "/:id" that renders the donut's show page
-
-router.get('/:id', (req, res) => {
-    const donutId = req.params.donutId
+router.get('/:id', (request, response) => {
+    const donutId = request.params.id;
     DonutModel.findById(donutId)
-    .then((donuts) => {
-        res.render('donuts/show', {
-            donut: donut
+        .then((donut) => {
+            response.render("donuts/show", {
+                donut: donut
+            })
         })
-    })
+        .catch((error) => {
+            console.log(error)
+        })
 })
-
 
 //======================
 // CREATE
@@ -74,13 +74,16 @@ router.post('/', (req, res) =>{
 // Create a GET edit route "/:id/edit" that renders the edit.hbs page and
 // sends that donut's data to it
 router.get('/:id/edit', (req, res) => {
-    const donutId = req.params.donutId
+    const donutId = req.params.id
     DonutModel.findById(donutId)
-    .then((donuts) => {
+    .then((donut) => {
 
         res.render('donuts/edit', {
             donut: donut
         })
+    })
+    .catch((error) => {
+        console.log(error)
     })
 })
 
@@ -97,7 +100,7 @@ router.put('/:id', (req, res) => {
     const updatedDonut = req.body
     DonutModel.findByIdAndUpdate(donutIdToUpdate, updatedDonut, {new: true})
     .then(() => {
-        res.redirect(`donuts/${donutIdToUpdate}`)
+        res.redirect(`/${donutIdToUpdate}`)
     })
     .catch((error) => {
         console.log(error)
@@ -118,7 +121,7 @@ router.delete('/:id', (req, res) => {
 
     DonutModel.findByIdAndRemove(donutId)
     .then((donuts) => {
-        res.redirect('/donuts')
+        res.redirect('/')
     })
     .catch((error) => {
         console.log(error)

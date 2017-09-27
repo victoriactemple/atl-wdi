@@ -2,7 +2,8 @@
 
 	<h2>You are viewing:
 
-		<<<< DONUT NAME HERE >>>>
+		{{!-- <<<< DONUT NAME HERE >>>> --}}
+		<div>{{donut.name}}</div>
 
 	</h2>
 
@@ -11,37 +12,46 @@
 	<div class="donut-container-show">
 		<h2 id="donut-name">
 
-				<<<< DONUT NAME HERE >>>>
+				{{!-- <<<< DONUT NAME HERE >>>> --}}
+				<div>{{donut.name}}</div>
 
 		</h2>
 
-				<<<< DONUT IMAGE HERE >>>>
+				{{!-- <<<< DONUT IMAGE HERE >>>> --}}
+			<div>	<img src="{{donut.img}}"></div>
 
 		<br>
 		<h3>Description:</h3>
 			<p>
 
-				<<<< DONUT DESCRIPTION HERE >>>>
+				{{!-- <<<< DONUT DESCRIPTION HERE >>>> --}}
+				<div>{{donut.description}}</div>
+
 
 			</p><br>
 		<h3>Price:</h3>
 			<p id="cost">$
 
-				<<<< DONUT PRICE HERE >>>> each</p><br>
+{{!-- <<<< DONUT PRICE HERE >>>> --}}
+				{{donut.price}} each</p><br>
 
 			<h3 id="quantity">
-
-	 				<<<< DONUT QUANTITY >>>> remaining
+{{!-- <<<< DONUT QUANTITY >>>>  --}}
+	 					{{donut.qty}}	remaining
 
 			</h3>
 
 			<br>
 
-			<<<< LINK TO THE DONUT's EDIT PAGE >>>>
+			{{!-- <<<< LINK TO THE DONUT's EDIT PAGE >>>> --}}
+			<a href = "/{{donut._id}}/edit">Edit</a>
 
-			<<<< BONUS: BUTTON THAT UPDATES THE COUNT >>>>
+			{{!-- <<<< BONUS: BUTTON THAT UPDATES THE COUNT >>>> --}}
 
 		</div>
 
-		<<<< BUTTON THAT DELETED THE DONUT >>>>
+		{{!-- <<<< BUTTON THAT DELETED THE DONUT >>>> --}}
+		<form action="/{{donut._id}}?_method=DELETE" method="POST">
+        <input type="submit" value="Delete">
+   		 </form>
 </main>
