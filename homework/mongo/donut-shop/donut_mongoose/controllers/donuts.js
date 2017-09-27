@@ -60,7 +60,7 @@ router.post('/', (req, res) =>{
 
     DonutModel.create(newDonut)
     .then(() => {
-        res.redirect('/donuts')
+        res.redirect('/')
     })
     .catch((error) => {
         console.log(error)
