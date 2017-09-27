@@ -127,14 +127,24 @@ const customers = [
 //  first guesses...I don't think this is it. promise.all(customers).order
 
 
-Promise.all(customers);
-kitchen.readMenu()
-.then((menu) => {
-  console.log("all food ordered");
-})
-.catch((error) => {
-  console.log(error);
-})
+// Promise.all(
+//   [ {
+//     name: "Josie",
+//     order: "Holy Guacamole"
+//   }, {
+//     name: "Chris",
+//     order: "Big Blue Buffalo"
+//   }, {
+//     name: "John",
+//     order: "Blue 'Shroom",
+//   }, {
+//     name: "Katelyn",
+//     order: "Fat Elvis"
+//   }]
+// ).then((customer) =>{
+//   customer.forEach(order => order())
+// })
+
 
 
 
