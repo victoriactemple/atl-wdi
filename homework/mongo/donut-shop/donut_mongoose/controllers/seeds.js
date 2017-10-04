@@ -3,6 +3,7 @@
 //======================
 //require express, mongoose, Donut schema, user
 var express = require("express");
+// will output a middleware function. We're using Express to buid out all of these routes.
 var router = express.Router();
 var mongoose = require("mongoose");
 var Donut = require("../models/donuts.js");

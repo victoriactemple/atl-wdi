@@ -17,7 +17,7 @@ router.get('/', (req, res) => {
         //They're already there students.projects
 
          //display each project in a div
-        res.render('project/index', {
+        res.render('projects/index', {
             student: student
         })
 

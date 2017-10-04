@@ -1,14 +1,10 @@
-<form action="/students/{{student._id}}?_method=PUT" method="POST" >
-    {{!-- default action for a form is POST  Must bring in method override it and replace it with PUT--}}
-    <h1>EDIT</h1>
-    <label for="name">Name</label>    
+<form action="/students/{{student._id}}?_method=PUT" method="POST">
+    <label for="name">Name</label>
     <input type="text" name="name" value="{{student.name}}">
 
     <label for="age">Age</label>
     <input type="number" name="age" value="{{student.age}}">
 
-    <button type="submit">Update</button>
-
+    <button type="submit">Edit {{student.name}}</button>
 </form>
-
 {{!-- //cannot do a PUT request, because the default method of a form is POST so you need method override --}}

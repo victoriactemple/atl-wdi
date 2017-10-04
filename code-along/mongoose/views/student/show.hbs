@@ -1,16 +1,16 @@
 <div>
     <div>Name: {{student.name}}</div>
     <div>Age: {{student.age}}</div>
-
     <a href="/students/{{student._id}}/edit">Edit</a>
+    <br>
     <a href="/students">Back to All Students</a>
-
-    {{!-- This is how you do this with a link! --}}
-    {{!-- <a href="/students/{{student._id}}/delete">Delete</a> --}}
-
-    {{!-- This is how you do this with a button! --}}
+    {{!-- this is how you do this with a link --}}
+    <a href="/students/{{student._id}}/delete">Delete</a>
+    {{!-- this is how you do this witH a button --}}
     <form action="/students/{{student._id}}?_method=DELETE" method="POST">
         <input type="submit" value="Delete">
     </form>
-    <a href="students/{{student._id}}/projects">{{student.name}}'s Projects</a>
+    <br>
+    {{!-- creates a link to take us to a page of a single student's projects --}}
+    <a href="../students/{{student._id}}/projects">{{student.name}}'s Projects</a>
 </div>
