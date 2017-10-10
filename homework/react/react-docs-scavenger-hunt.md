@@ -10,7 +10,9 @@
 
 2. We are using JSX to write HTML inside of our React. Are we required to use JSX with React? Are there any alternatives?
 
-- You aren't required to use JSX, but it's easiest to read. An alternative to JSX is React.createElement() components, props, children. JSX is just compiling all of that.   
+- You aren't required to use JSX, but it's easiest to read. An alternative to JSX is React.createElement() components, props, children. JSX is just compiling all of that. 
+
+"language extension"  
 
 
 3. Does React re-render the entire component when one part of it changes?
