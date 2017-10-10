@@ -46,7 +46,7 @@ class App extends Component {
     }).then((response) => {
     console.log(response)
      this.setState({
-       id: response.data.Id
+      movie: response.data
       })
     }) .catch((error) => {
       console.log(error)

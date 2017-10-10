@@ -14,6 +14,8 @@ const Movie = (props) => {
         </p>
         <p>{props.movie.Plot}</p>
       </div>
+
+      <img src ={props.movie.Poster} alt={props.movie.title} />
     </section>
   );
 };
