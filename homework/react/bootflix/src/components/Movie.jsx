@@ -10,12 +10,12 @@ const Movie = (props) => {
         <p>
           <strong>Released:</strong>{props.movie.Year}<br />
           <strong>Directed By:</strong> {props.movie.Director}<br />
-          <em>{props.movie.Genre}:</em>
+          <strong>Genre:</strong> {props.movie.Genre} <br />
         </p>
         <p>{props.movie.Plot}</p>
       </div>
 
-      <img src ={props.movie.Poster} alt={props.movie.title} />
+      <img src ={props.movie.Poster} alt={props.movie.Title} />
     </section>
   );
 };
