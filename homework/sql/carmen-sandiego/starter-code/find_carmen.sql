@@ -33,6 +33,16 @@ SELECT name FROM city WHERE countrycode ='SMR';
 
 -- carmen=#
 
+
+ SELECT * FROM city WHERE name LIKE 'Serr%';
+
+   id  |    name    | countrycode |     district      | population
+------+------------+-------------+-------------------+------------
+  265 | Serra      | BRA         | Esp�rito Santo  |     302666
+ 3170 | Serravalle | SMR         | Serravalle/Dogano |       4802
+(2 rows)
+
+
 Clue #5
 
 
