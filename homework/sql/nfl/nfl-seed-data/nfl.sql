@@ -150,3 +150,49 @@ SELECT name, position FROM players WHERE salary < 1000000;
  C.J. Spiller           | RB
  Garrison Sanborn       | LB
  Eric Wood
+
+ # 9
+SELECT name FROM players ORDER BY salary DESC LIMIt 1;
+      name
+----------------
+ Peyton Manning
+(1 row)
+
+
+#10
+SELECT name, position FROM players ORDER BY salary ASC LIMIT 100
+
+#11
+nfl=# 
+SELECT AVG(salary) FROM players;
+         avg
+----------------------
+ 1579692.539817232376
+(1 row)
+
+
+#12
+nfl=# SELECT AVG(salary) FROM players WHERE position='DE';
+         avg
+----------------------
+ 2161326.377049180328
+(1 row)
+
+#13
+
+nfl=# SELECT SUM(players.salary) FROM players, teams WHERE players.team_id=teams.id AND teams.name LIKE 'New York Giants';
+   sum
+----------
+ 74179466
+(1 row)
+
+nfl=#
+
+#14
+nfl=# SELECT SUM(players.salary) FROM players, teams WHERE players.team_id=teams.id AND teams.name LIKE 'New York Giants';
+   sum
+----------
+ 74179466
+(1 row)
+
+nfl=#
