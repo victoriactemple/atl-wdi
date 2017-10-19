@@ -45,6 +45,28 @@ SELECT name FROM city WHERE countrycode ='SMR';
 
 Clue #5
 
+ ****** Got super lost and had to look at the solutions to get me back on track...
+ I think something may be out of order or flip-flopped? 
+
+SELECT name FROM city WHERE id = '211';
+    name
+------------
+ Bras�lia
+(1 row)
+
+
+SELECT name FROM country WHERE code = 'BRA';
+  name
+--------
+ Brazil
+(1 row)
 
 
 
+
+Clue #6 
+ SELECT name FROM city WHERE population = 91084;
+     name
+--------------
+ Santa Monica
+(1 row)
