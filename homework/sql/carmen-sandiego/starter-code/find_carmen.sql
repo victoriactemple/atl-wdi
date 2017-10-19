@@ -14,12 +14,24 @@ Clue #1:
 
 
  Clue #4
-SELECT name FROM country WHERE code ='SMR';
+SELECT name FROM city WHERE countrycode ='SMR';
 
+-- so she's in Serravalle 
+
+-- carmen=# SELECT * FROM country WHERE name = 'San Marino';
+--  code |    name    | continent |     region      | surfacearea | indepyear | population | lifeexpectancy |  gnp   | gnpold | localname  | governmentform | headofstate | capital | code2
+-- ------+------------+-----------+-----------------+-------------+-----------+------------+----------------+--------+--------+------------+----------------+-------------+---------+-------
+--  SMR  | San Marino | Europe    | Southern Europe |          61 |       885 |      27000 |           81.1 | 510.00 |        | San Marino | Republic       |             |    3171 | SM
+-- (1 row)
+
+-- carmen=# SELECT name FROM city WHERE countrycode ='SMR';
 --     name
 -- ------------
+--  Serravalle
 --  San Marino
--- (1 row)
+-- (2 rows)
+
+-- carmen=#
 
 Clue #5
 
