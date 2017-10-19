@@ -1,6 +1,4 @@
 import React, {Component} from 'react';
-
-
 // Update the forms to utilize methods being passed down from App.js
 // const Search = (props) => {
 class Search extends Component {
@@ -12,8 +10,6 @@ constructor (){
     id: ''
   }
 }
-  
-
 render () {
   return (
     <section id="movie-search">

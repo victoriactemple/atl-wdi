@@ -10,9 +10,6 @@ class App extends Component {
     super();
     this.state = {
       movie: ''
-
-
-      
     }
   }
 
@@ -31,33 +28,23 @@ class App extends Component {
     .catch((err) => {
         console.log(err)
       })
-
   }
-  
-
-  //handle submit title
-   
-
   searchById = (event) => {
     event.preventDefault()
     console.log("Search by ID");
     const id = event.target.id.value
-     axios.get(`http://www.omdbapi.com/?apikey=d31f1a94&i=${id}`, {
-    }).then((response) => {
+     axios.get(`http://www.omdbapi.com/?apikey=d31f1a94&i=${id}`)
+    .then((response) => {
     console.log(response)
      this.setState({
       movie: response.data
       })
     }) .catch((error) => {
       console.log(error)
-    })
-    
+    }) 
   }
-
   componentWillMount() {
-
   }
-
   //Pass searchByTitle, searchById, and this.state.movie to it's appropriate child components.
   render() {
     return (
