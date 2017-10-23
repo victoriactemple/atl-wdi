@@ -99,14 +99,20 @@ Please answer the following questions in the spaces provided.
 1.  How do you write an `if` statement in Ruby?
 
   ```ruby
-    # your answer here
+    if 5 > 4
+    puts "Wow, is so big"
+    end
   ```
 
 2.  Please write code that would take the string "007", reverse it,
     and return the integer `700`.
 
   ```ruby
-    # your answer here
+    bond = "007"
+    bond.reverse 
+    => "700"
+
+
   ```
 
 3.  Please write code that takes the array `[23,56,3,7]`, sorts it,
@@ -114,37 +120,50 @@ Please answer the following questions in the spaces provided.
     (i.e. modifying the original array, rather than returning a new array).
 
   ```ruby
-    # your answer here
+   array = [23, 56, 3, 7]
+    array.sort!.reverse!
+
+  
+
+
   ```
 
 3.  What does an exclamation point at the end of a method name usually signify?
 
   ```text
-    Your answer here:
+    they signify they will change the original definition of the object of array that it's tacked on to. 
   ```
 
 4.  What does a question mark and the end of a method name usually signify?
 
   ```text
-    Your answer here:
+    means the method will return a boolean
   ```
 
 5.  How do you define a method in Ruby? Give a simple example.
 
   ```ruby
-    # your answer here
+    def hello
+    puts "hello"
+    end
   ```
 
 6.  How do you create a class in Ruby? Give a simple example.
 
   ```ruby
-    # your answer here
+  class NewClass
+    def initialize
+    puts "hello, we're making a new class"
+    end
+
+  end
   ```
 
 7. Please give an example of how iteration can be performed in Ruby.
 
   ```ruby
-    # your answer here
+  tacos = ['tempeh', 'cheese', 'bean', 'tofu', 'grilled vegeable']
+    tacos.each{|i| puts "I gots #{i} tacos"}
   ```
 
 8.  If I modify a class in Ruby by adding a method, will instances of that class
@@ -152,5 +171,6 @@ Please answer the following questions in the spaces provided.
     Please explain why.
 
   ```text
-    Your answer here:
+      I don't think so, because when you instantiate a class you get an object, so the methods you define in that object are only available to that object.
+
   ```
